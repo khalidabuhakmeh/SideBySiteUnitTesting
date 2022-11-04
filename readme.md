@@ -70,7 +70,7 @@ public partial class Calculator
 
 I also use file nesting in [JetBrains Rider](https://jetbrains.com/rider) to reduce the noise in the solution explorer.
 
-![img.png](img.png)
+![img_2.png](img_2.png)
 
 If you'd like to have test files in the same file and class, you'll need an XUnit shim that lets your app compile. I've included it below, but its not my cup of tea.
 
@@ -82,5 +82,9 @@ public static class Assert { public static void Equal(object expected, object ac
 ```
 
 Finally, if your project is a console application like in this sample, you'll need an additional `<GenerateProgramFile>false</GenerateProgramFile>` element in your `.csproj` to prevent the TestHost from generating an entry point. After all, you should already have one in `Program.cs`.
+
+Switching from `Debug` (seen in the previous image) to `Release` will remove the `*.Tests.cs` files from compilation.
+
+![img.png](img.png)
 
 Cheers!
