@@ -1,11 +1,11 @@
 using System.Numerics;
-using Xunit;
 
 namespace SideDish;
 
 public partial class Calculator
 {
-    public int Add(int left, int right)
+    public T Add<T>(T left, T right)
+        where T : INumber<T>
     {
         return left + right;
     }
